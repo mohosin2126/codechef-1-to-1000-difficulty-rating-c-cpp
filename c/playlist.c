@@ -1,24 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int t, n, x;
+    int t;
     scanf("%d", &t);
-
     while (t--) {
+        int n, x;
         scanf("%d %d", &n, &x);
-        
-        int cycle_time = 3 * x;
-        int complete_cycles = n / cycle_time;
-        int remaining_time = n % cycle_time;
-
-        int times_listened_to_C = complete_cycles;
-        
-        if (remaining_time >= 2 * x) {
-            times_listened_to_C += 1;
-        }
-
-        printf("%d\n", times_listened_to_C);
+        printf("%d\n", n / (x * 3));
     }
-
     return 0;
 }
