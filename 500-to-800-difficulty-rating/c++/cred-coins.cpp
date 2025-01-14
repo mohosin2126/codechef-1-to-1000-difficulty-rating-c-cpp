@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     int t;
     cin >> t;
-    while (t--) {
+    while (t--)
+    {
         int x, y;
         cin >> x >> y;
         int total_coins = x * y;
