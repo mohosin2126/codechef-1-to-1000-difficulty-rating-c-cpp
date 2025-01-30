@@ -10,9 +10,19 @@ int main()
     {
         int a, b, c;
         cin >> a >> b >> c;
-
-        int largest = max(a, max(b, c));
-        int secondLargest = min(max(a, b), max(b, c));
+        int secondLargest;
+        if ((a > b && a < c) || (a < b && a > c))
+        {
+            secondLargest = a;
+        }
+        else if ((b > a && b < c) || (b < a && b > c))
+        {
+            secondLargest = b;
+        }
+        else
+        {
+            secondLargest = c;
+        }
 
         cout << secondLargest << endl;
     }
